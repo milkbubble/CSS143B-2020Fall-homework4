@@ -6,6 +6,11 @@ import java.io.PrintStream;
 
 public class Problem3 {
     public static void printListInReverse(ListNode list, PrintStream print) {
-        // homework
+        ListNode head = list;
+        if (head == null) {
+            return;
+        }
+        printListInReverse(head.next, print);
+        print.println(head.val);
     }
 }
